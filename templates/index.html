@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment Analysis App</title>
+</head>
+<body>
+    <h1>Movie Review Sentiment Analyzer</h1>
+    <form action="/predict" method="POST">
+        <textarea name="review" rows="4" cols="50" placeholder="Enter your movie review here..."></textarea><br><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+    <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>
